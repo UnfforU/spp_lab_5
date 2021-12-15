@@ -21,7 +21,7 @@ namespace DependencyInjectionContainerLib.Block
         public DependencyProvider(IDependenciesConfiguration _configuration)
         {
             // Check if configuration is valid
-            IValidator configValidator = new Validator(configuration);
+            IValidator configValidator = new Validator(_configuration);
             if (!configValidator.IsValid())
             {
                 throw new ArgumentException("Invalid configuration!");
